@@ -1,7 +1,7 @@
 [package]
 name    = "Rust-WORLD"
-version = "0.1.1"
-authors = ["BiggieBoo18"]
+version = "0.2.0"
+authors = ["BiggieBoo18", "Layetri <rosa@expressivelabs.net>"]
 edition = "2018"
 
 license = "MIT"
@@ -11,8 +11,8 @@ readme = "README.md"
 keywords = ["Rust-WORLD", "WORLD", "world", "vocoder"]
 
 [dependencies]
-rsworld-sys = "0.1.0"
-rsworld     = "0.1.0"
+rsworld-sys = "0.2.0"
+rsworld     = "0.2.0"
 
 [workspace]
 members = [

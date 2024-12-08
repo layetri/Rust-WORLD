@@ -11,8 +11,8 @@ readme = "README.md"
 keywords = ["Rust-WORLD", "WORLD", "world", "vocoder"]
 
 [dependencies]
-rsworld-sys = "0.2.0"
-rsworld     = "0.2.0"
+rsworld-sys = {version = "0.2.0", path = "./rsworld-sys"}
+rsworld     = {version = "0.2.0", path = "./rsworld"}
 
 [workspace]
 members = [

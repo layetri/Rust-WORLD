@@ -5,6 +5,10 @@ version = 4
 [[package]]
 name = "Rust-WORLD"
 version = "0.2.0"
+dependencies = [
+ "rsworld",
+ "rsworld-sys",
+]
 
 [[package]]
 name = "cc"
@@ -17,23 +21,14 @@ dependencies = [
 
 [[package]]
 name = "rsworld"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
- "rsworld-sys 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rsworld-sys",
 ]
 
 [[package]]
 name = "rsworld-sys"
-version = "0.1.0"
-dependencies = [
- "cc",
-]
-
-[[package]]
-name = "rsworld-sys"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e6f3d097f63fd46fbf37066a56d14ff44d6bafe8a9decd6f6cab2d7e4409ada0"
+version = "0.2.0"
 dependencies = [
  "cc",
 ]

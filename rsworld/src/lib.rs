@@ -267,7 +267,7 @@ pub fn stonemask(x: &[f64], fs: i32, temporal_positions: &[f64], f0: &[f64]) -> 
     refined_f0
 }
 
-pub fn synthesis(f0: &[f64], spectrogram: &[&[f64]], aperiodicity: &[&[f64]], frame_period: f64, fs: i32) -> Vec<f64> {
+pub fn synthesis(f0: &[f64], spectrogram: &[Vec<f64>], aperiodicity: &[Vec<f64>], frame_period: f64, fs: i32) -> Vec<f64> {
     let f0_length = f0.len() as i32;
     
     let spectrogram_ptr = spectrogram
@@ -479,9 +479,6 @@ mod tests {
         
         let option = D4COption::new();
         let aperiodicity = d4c(&x, FS, &temporal_positions, &f0, &option);
-
-        let spectrogram: &[&[f64]] = &spectrogram.iter().map(|inner| inner.as_slice()).collect::<Vec<_>>();
-        let aperiodicity: &[&[f64]] = &aperiodicity.iter().map(|inner| inner.as_slice()).collect::<Vec<_>>();
         
         let y = synthesis(&f0, &spectrogram, &aperiodicity, frame_period, FS);
         let y_length = f0.len() as i32 * frame_period as i32 * FS / 1000;
